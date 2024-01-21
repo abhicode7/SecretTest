@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+      VITE_NEW_SECRET: ${{ secrets.VITE_NEW_SECRET }}
+
 jobs:
   build:
     name: Build
