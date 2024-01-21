@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const HEADER = process.env.REACT_APP_VITE_NEW_SECRET;
+  const HEADER = import.meta.env.VITE_NEW_SECRET;
 
   return (
     <>
