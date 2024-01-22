@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const HEADER = import.meta.env.VITE_NEW_SECRET;
+  // const HEADER = import.meta.env.VITE_NEW_SECRET;
 
   return (
     <>
@@ -17,7 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>{HEADER}</h1>
+      <h1>ABC</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

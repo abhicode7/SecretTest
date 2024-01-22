@@ -1,8 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import path from 'path';
+import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
 
-// https://vitejs.dev/config/
-export default defineConfig({
+// Load environment variables from the .env file
+dotenv.config();
+
+export default {
   plugins: [react()],
-  base: '/SecretTest/'
-})
+  base: '/SecretTest/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  define: {
+    // Pass environment variables to Vite
+    'import.meta.env': JSON.stringify(process.env),
+  },
+};
