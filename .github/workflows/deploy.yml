@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  VITE_GOOGLE: ${{ secrets.VITE_GOOGLE }}
+  VITE_ABC: ${{ secrets.VITE_ABC }}
 
 jobs:
   build:
